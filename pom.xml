@@ -7,7 +7,43 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>colabdemo Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<springframework.version>4.0.6.RELEASE</springframework.version>
+  	<hibernate.version>4.3.6.Final</hibernate.version>
+  	<mysql.connector.version>5.1.31</mysql.connector.version>
+  </properties>
+  
+  
   <dependencies>
+  
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>${springframework.version}</version>
+	</dependency>
+  
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+ 
+        <!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+ 
+        <!-- MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.connector.version}</version>
+        </dependency>   
   
 	<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 	<dependency>
@@ -15,7 +51,15 @@
 	    <artifactId>servlet-api</artifactId>
 	    <version>2.5</version>
 	    <scope>provided</scope>
-	</dependency>  
+	</dependency>
+  
+	<!-- https://mvnrepository.com/artifact/jstl/jstl -->
+	<dependency>
+	    <groupId>jstl</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+  
   
     <dependency>
       <groupId>junit</groupId>
