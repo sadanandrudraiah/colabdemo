@@ -9,5 +9,18 @@
 <body>
 	<h1>Login Page</h1>
 
+<%-- <c:if test="${param.ERROR_MSG != null}" >   ${param} shortcut for req param
+		<c:out value="${param.ERROR_MSG }"  >
+		</c:out>
+	</c:if>
+	 --%>
+	<form action="login.html" method="post">
+		<label>User Id</label>
+		<input type="text" name="userId"><br/>
+		<label>Password</label>
+		<input type="password" name="pwd"><br/>
+		<input type="submit" value="login">
+	</form>
+
 </body>
 </html>
