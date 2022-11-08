@@ -7,10 +7,9 @@
         
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">update</property>
-
-  <!--     	<mapping class="com.cruds.entity.Book"/>
+     
       	<mapping class="com.cruds.entity.User"/>
- -->
+ 
     </session-factory>
 
 </hibernate-configuration>
