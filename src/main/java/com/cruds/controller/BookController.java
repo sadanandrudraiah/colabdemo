@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.cruds.entity.Book;
 import com.cruds.services.BookService;
 
-
 @Controller
 public class BookController {
 	
