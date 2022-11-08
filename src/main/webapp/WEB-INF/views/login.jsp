@@ -11,8 +11,8 @@
 
 	<h1>Login Page</h1>
 	
-	<c:if test="${param.ERROR_MSG != null}" >   <%-- ${param} shortcut for req param --%>
-		<c:out value="${param.ERROR_MSG }"  >
+	<c:if test="${param.ERROR != null}" >   <%-- ${param} shortcut for req param --%>
+		<c:out value="${param.ERROR }"  >
 		</c:out>
 	</c:if>
 	
@@ -20,7 +20,7 @@
 		<label>User Id</label>
 		<input type="text" name="userId"><br/>
 		<label>Password</label>
-		<input type="password" name="pwd"><br/>
+		<input type="password" name="password"><br/>
 		<input type="submit" value="login">
 	</form>
 

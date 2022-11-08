@@ -9,6 +9,7 @@
         <property name="hbm2ddl.auto">update</property>
      
       	<mapping class="com.cruds.entity.User"/>
+      	<mapping class="com.cruds.entity.Book"/>
  
     </session-factory>
 

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.cruds.entity.User;
 import com.cruds.services.UserService;
 
 @Controller
@@ -28,8 +29,8 @@ public class AppController {
 			              ,@RequestParam("password") String password
 			               ,HttpSession session ,RedirectAttributes ra)
 	{
-		return null;
-/*		User user = userService.authenticate(userId, password);
+		
+		User user = userService.authenticate(userId, password);
 		
 		if(user != null)
 		{
@@ -41,7 +42,7 @@ public class AppController {
 		{
 			ra.addAttribute("ERROR", "Invalid");
 			return "redirect:login";
-		}*/
+		}
 		
 	}	
 	
