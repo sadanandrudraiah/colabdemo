@@ -14,25 +14,25 @@ import com.cruds.services.UserService;
 
 @Controller
 public class AppController {
-
-	@Autowired
-	UserService userService;
 	
-	@RequestMapping("/login")
+	@Autowired
+	private UserService userService;
+
+	@RequestMapping(value="/login")
 	public String showLoginPage()
 	{
 		return "login";
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String doLogin(@RequestParam("userId") String userId, 
-			@RequestParam("pwd") String password, HttpSession session, RedirectAttributes redirectAttributes )
+	@RequestMapping(value="/login" ,method= RequestMethod.POST)
+	public String doLogin(@RequestParam("userId") String userId
+			              ,@RequestParam("password") String password
+			               ,HttpSession session ,RedirectAttributes ra)
 	{
-		System.out.println(userId + password);
-			
+		
 		User user = userService.authenticate(userId, password);
 		
-		if(user !=null)
+		if(user != null)
 		{
 			user.setPassword("");
 			session.setAttribute("USER", user);
@@ -40,9 +40,12 @@ public class AppController {
 		}
 		else
 		{
-			redirectAttributes.addAttribute("ERROR_MSG", "Invalid Credentials");
+			ra.addAttribute("ERROR", "Invalid");
 			return "redirect:login";
 		}
-			
-	}
+		
+	}	
 }
+	
+
+	
