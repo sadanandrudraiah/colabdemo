@@ -49,7 +49,7 @@ public class BookDAOImpl implements BookDAO{
 		Session session = sf.openSession();
 		String hql = "from Book b where b.ISBN = ? ";
 		
-		List<Book> list = session.createQuery(hql).setInteger(0, ISBN).list();
+		List<Book> list = session.createQuery(hql).setInteger(1, ISBN).list();
 		
 		session.close();
 		
