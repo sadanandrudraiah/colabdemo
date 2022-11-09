@@ -16,7 +16,7 @@
 	</c:if>
 
 	<a href="book.html">
-	<br/> Book</a>
+	<br/><br/> Book</a>
 	
 	<a href="student.html">
 	<br/> Student</a>
