@@ -13,6 +13,8 @@
 	<h1>Book Page</h1>
 
 	<form:form action="editBook.html" method="post">
+		<form:input path="id" readonly="true"/>
+		<br />
 		<form:input path="ISBN" readonly="true"/>
 		<br />
 		<form:input path="title" />

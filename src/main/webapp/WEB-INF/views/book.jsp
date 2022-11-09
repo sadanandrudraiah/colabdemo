@@ -13,10 +13,13 @@
 	<h1>Book Page</h1>
 
 	<form:form action="book.html" method="post">
+		<label>Book ISBN</label>
 		<form:input path="ISBN" />
 		<br />
+		<label>Book title   </label>
 		<form:input path="title" />
 		<br />
+		<label>Book Price</label>
 		<form:input path="price" />
 		<br />
 		<input type="submit" value="Create" />
@@ -45,8 +48,8 @@
 					<td><c:out value="${b.ISBN}"></c:out></td>
 					<td><c:out value="${b.title}"></c:out></td>
 					<td><c:out value="${b.price}"></c:out></td>
-					<td><a href="<c:url value='/del-${b.ISBN}'/>">Delete</a></td>
-					<td><a href="<c:url value='/edit-${b.ISBN}'/>">edit</a></td>					
+					<td><a href="<c:url value='/book-del-${b.id}'/>">Delete</a></td>
+					<td><a href="<c:url value='/book-edit-${b.ISBN}'/>">edit</a></td>					
 				</tr>
 				
 			</c:forEach>
