@@ -22,13 +22,19 @@
 	</c:if>
 	
 	<form action="login.html" method="post">
+		
 		<label>User Id</label>
 		<input type="text" name="userId"><br/>
+		
 		<label>Password</label>
 		<input type="password" name="password"><br/>
+		
 		<input type="submit" value="login">
 	</form>
 
+<br/><br/><br/>
+
+<a href = "user.html"> If you are a New User Please LOGIN HERE</a>
 	
 </body>
 </html>
