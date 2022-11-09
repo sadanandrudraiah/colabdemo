@@ -10,7 +10,7 @@ public interface BookDAO {
 	
 	public List<Book> getAll();
 	
-	public void delete(int ISBN);
+	public void delete(Long id);
 	
 	public Book edit(int ISBN);
 	

@@ -14,11 +14,11 @@ public class Book {
 	@GeneratedValue
 	private Long id;
 	
-	@Column(length=25, nullable=false)
-	private String title;
+	@Column(nullable=false)
+	private int ISBN;
 	
 	@Column(length=25, nullable=false)
-	private int ISBN;
+	private String title;
 	
 	@Column(length=25, nullable=false)
 	private double price;
@@ -28,10 +28,10 @@ public class Book {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Book(String title, int iSBN, double price) {
+	public Book(int iSBN, String title, double price) {
 		super();
-		this.title = title;
 		ISBN = iSBN;
+		this.title = title;
 		this.price = price;
 	}
 
@@ -43,20 +43,20 @@ public class Book {
 		this.id = id;
 	}
 
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
 	public int getISBN() {
 		return ISBN;
 	}
 
 	public void setISBN(int iSBN) {
 		ISBN = iSBN;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public double getPrice() {
@@ -69,7 +69,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", ISBN=" + ISBN + ", price=" + price + "]";
+		return "Book [id=" + id + ", ISBN=" + ISBN + ", title=" + title + ", price=" + price + "]";
 	}
-	
+
 }

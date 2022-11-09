@@ -31,17 +31,18 @@ public class BookController {
 		bookService.create(b);
 		System.out.println(b);
 		return "redirect:book.html";
+		
 	}
 	
-	@RequestMapping(value="/del-{ISBN}", method=RequestMethod.GET)
-	public String delete(@PathVariable("ISBN") int ISBN)
+	@RequestMapping(value="/book-del-{id}", method=RequestMethod.GET)
+	public String delete(@PathVariable("id") Long id)
 	{
-		bookService.delete(ISBN);
-		System.out.println("deleting ISBN " + ISBN);
+		bookService.delete(id);
+		System.out.println("deleting id " + id);
 		return "redirect:book.html";
 	}
 	
-	@RequestMapping(value="/edit-{ISBN}", method=RequestMethod.GET)
+	@RequestMapping(value="/book-edit-{ISBN}", method=RequestMethod.GET)
 	public String edit(@PathVariable("ISBN") int ISBN,Model model)
 	{
 		model.addAttribute("command",bookService.edit(ISBN));
@@ -51,7 +52,6 @@ public class BookController {
 	@RequestMapping(value="editBook.html" , method=RequestMethod.POST)
 	public String updateBook(@ModelAttribute("book") Book b )
 	{
-		
 		bookService.update(b);
 		return "redirect:book.html";
 	}

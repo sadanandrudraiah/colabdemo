@@ -24,9 +24,9 @@ public class BookService {
 		return dao.getAll();
 	}
 
-	public void delete(int ISBN)
+	public void delete(Long id)
 	{
-		dao.delete(ISBN);
+		dao.delete(id);
 	}
 
 	public Book edit(int ISBN)

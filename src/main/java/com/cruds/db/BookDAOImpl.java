@@ -33,11 +33,11 @@ public class BookDAOImpl implements BookDAO{
 		return list;
 	}
 
-	public void delete(int ISBN) {
+	public void delete(Long id) {
 		
 		Session session = sf.openSession();
 		session.getTransaction().begin();
-		Book b = (Book) session.load(Book.class, ISBN);
+		Book b = (Book) session.load(Book.class, id);
 		
 		session.delete(b);
 		session.getTransaction().commit();
@@ -49,7 +49,7 @@ public class BookDAOImpl implements BookDAO{
 		Session session = sf.openSession();
 		String hql = "from Book b where b.ISBN = ? ";
 		
-		List<Book> list = session.createQuery(hql).setInteger(1, ISBN).list();
+		List<Book> list = session.createQuery(hql).setInteger(0, ISBN).list();
 		
 		session.close();
 		
@@ -57,6 +57,8 @@ public class BookDAOImpl implements BookDAO{
 		{
 			return list.get(0);
 		}
+		
+		
 		else 
 		{
 			return null;
