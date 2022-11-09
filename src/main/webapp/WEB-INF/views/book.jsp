@@ -13,10 +13,13 @@
 	<h1>Book Page</h1>
 
 	<form:form action="book.html" method="post">
+	<label>Book ISBN</label>
 		<form:input path="ISBN" />
 		<br />
+		<label>Book Tittle</label>
 		<form:input path="title" />
 		<br />
+		<table>Book Price</table>
 		<form:input path="price" />
 		<br />
 		<input type="submit" value="Create" />

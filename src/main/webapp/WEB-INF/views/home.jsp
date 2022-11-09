@@ -18,6 +18,10 @@
 	<a href="book.html">
 	<br/> Book</a>
 	
+	<a href="student.html">
+	<br/> Student</a>
+	
+	
 	 
 </body>
 </html>
