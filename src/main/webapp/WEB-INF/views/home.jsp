@@ -25,8 +25,10 @@
 		
 	<br />
 	<br />
-
 	<a href="student.html"><button>Student</button> <br /></a>
+
+	<br /><br />
+	<a href = "user.html"><button>UPDATE PASSWORD</button></a>
 
 </body>
 </html>

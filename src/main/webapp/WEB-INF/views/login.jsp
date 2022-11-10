@@ -33,8 +33,8 @@
 	</form>
 
 <br/><br/><br/>
+<a href = "user.html"> If you are a New User Please CLICK BELOW <br><br/><button>LOGIN</button></a>
 
-<a href = "user.html"> If you are a New User Please LOGIN HERE</a>
 	
 </body>
 </html>

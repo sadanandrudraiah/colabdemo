@@ -22,14 +22,14 @@
 		<form:input path="userId" />
 		<br />
 		<label>Password</label>
-		<form:input path="password" />
+		<form:input path="password" value ="********"/>
 		<br />
 		<input type="submit" value="Create" />
 
 	</form:form>
 
 
-<h2>User List</h2>
+<h2>UPDATE YOUR PASSWORD</h2>
 
 <table border="1">
 
@@ -56,14 +56,6 @@
 
 		</tbody>
 	</table>
-	
-	<br/><br/>
-	<a href="book.html"> <button> Book</button></a>
-	<br/><br/>
-	<a href="student.html"><button> Student</button>
-	<br/></a>
-
-	
 	
 	
 </body>

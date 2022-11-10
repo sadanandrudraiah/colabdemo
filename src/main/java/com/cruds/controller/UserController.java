@@ -31,7 +31,7 @@ public class UserController {
 		{
 			userService.create(u);
 			System.out.println(u);
-			return "redirect:user.html";
+			return "home";
 		}
 		
 		@RequestMapping(value= "/user-del-{id}", method= RequestMethod.GET)
