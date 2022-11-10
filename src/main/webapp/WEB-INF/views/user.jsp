@@ -29,6 +29,8 @@
 	</form:form>
 
 
+<h2>User List</h2>
+
 <table border="1">
 
 		<thead>
@@ -54,6 +56,14 @@
 
 		</tbody>
 	</table>
+	
+	<br/><br/>
+	<a href="book.html"> <button> Book</button></a>
+	<br/><br/>
+	<a href="student.html"><button> Student</button>
+	<br/></a>
+
+	
 	
 	
 </body>

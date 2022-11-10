@@ -42,12 +42,17 @@
 				<tr>
 					<td><c:out value="${s.rollNum}"></c:out></td>
 					<td><c:out value="${s.name}"></c:out></td>
-					<td><a href="<c:url value='/student-del-${s.rollNum}'/>">Delete</a></td>
-					<td><a href="<c:url value='/student-edit-${s.rollNum}'/>">edit</a></td>
+					<td><a href="<c:url value='/student-del-${s.rollNum}'/>"><button>Delete</button></a></td>
+					<td><a href="<c:url value='/student-edit-${s.rollNum}'/>"><button>edit</button></a></td>
 
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
+	
+	<br/>
+	<br/>
+	<a href="user.html"><button>user </button> <br /></a>
+	
 </body>
 </html>

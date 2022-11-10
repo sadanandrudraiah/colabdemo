@@ -48,13 +48,17 @@
 					<td><c:out value="${b.ISBN}"></c:out></td>
 					<td><c:out value="${b.title}"></c:out></td>
 					<td><c:out value="${b.price}"></c:out></td>
-					<td><a href="<c:url value='/book-del-${b.id}'/>">Delete</a></td>
-					<td><a href="<c:url value='/book-edit-${b.ISBN}'/>">edit</a></td>					
+					<td><a href="<c:url value='/book-del-${b.id}'/>"><button> Delete</button></a></td>
+					<td><a href="<c:url value='/book-edit-${b.ISBN}'/>"><button>edit</button></a></td>					
 				</tr>
 				
 			</c:forEach>
 
 		</tbody>
 	</table>
+	
+	<br/><br/>
+	<a href="user.html"><button>user </button> <br /></a>
+	
 </body>
 </html>
