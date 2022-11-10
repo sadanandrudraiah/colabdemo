@@ -1,15 +1,15 @@
 package com.cruds.test;
 
-import java.util.List;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import static org.junit.Assert.*;
-import com.cruds.db.BookDAO;
-import com.cruds.entity.Book;
+
+import com.cruds.db.UserDAO;
+import com.cruds.entity.User;
 
 @ContextConfiguration
 (
@@ -18,17 +18,16 @@ import com.cruds.entity.Book;
   }
 )
 @RunWith(SpringJUnit4ClassRunner.class)
-public class TestBook {
+public class TestUser {
 
 	@Autowired
-	BookDAO dao;
+	UserDAO dao;
 	
 	@Test
-	public void testGetAll() {
-		List<Book> list = dao.getAll();
-		assertTrue(list.size() > 0);
+	public void testCreate() {
+		int size = dao.getAll().size();
+		dao.create(new User("Test", "empty"));
+		assertTrue(dao.getAll().size() > size);
 	}
-	
-	
 
 }
